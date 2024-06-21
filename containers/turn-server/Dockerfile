@@ -2,7 +2,7 @@ ARG alpine_ver=3.16
 FROM alpine:${alpine_ver}
 
 RUN apk update && \
-    apk add --no-cache  curl bind-tools  coturn
+    apk add --no-cache  curl bind-tools  coturn aws-cli
 
 COPY turnserver.conf /etc/turnserver.conf
 COPY entrypoint.sh /entrypoint.sh
